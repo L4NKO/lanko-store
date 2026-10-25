@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+  gap: 20px;
+}
+
+ul {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+nav a:hover {
+  color: #109e49;
+}
+
+.hero {
+  width: 100%;
+  aspect-ratio: 2126 / 740;
+  min-height: 0;
+  padding: 40px 7%;
+
+  display: flex;
+  align-items: center;
+
+  background-image: url("../images/banner1.png");
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f1f1f1;
+}
+
+.hero-texto {
+  max-width: 400px;
+}
+
+.hero-texto h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.hero-texto p {
+  font-size: 16px;
+  max-width: 280px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.hero-texto a {
+  display: inline-block;
+  background-color: #16c65d;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+}
+
+.hero-texto a:hover {
+  background-color: #109e49;
+}
+
+#produtos {
+  padding: 60px 27px;
+}
+
+#produtos h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.lista-produtos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.produto img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+}
+
+.produto {
+  background-color: white;
+  border: 1px solid #add;
+  border-radius: 10px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.produto h3 {
+  font-size: 22px;
+}
+
+.produto p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.produto span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #222;
+}
+
+.produto button {
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.produto button:hover {
+  background-color: #109e49;
+}
+
+#sobre {
+  background-color: #e9ecef;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#sobre h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+#sobre p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #444;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+footer p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+footer p:last-child {
+  margin-bottom: 0;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #086b35;
+  outline-offset: 3px;
+}
+
+/* TEMA ESCURO */
+
+body.tema-escuro {
+  background-color: #161616;
+  color: #ffffff;
+}
+
+body.tema-escuro header {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+body.tema-escuro nav a {
+  color: #ffffff;
+}
+
+body.tema-escuro nav a:hover {
+  color: #16c65d;
+}
+
+body.tema-escuro .produto {
+  background-color: #292929;
+  border-color: #444444;
+}
+
+body.tema-escuro .produto h3,
+body.tema-escuro .produto span {
+  color: #ffffff;
+}
+
+body.tema-escuro .produto p {
+  color: #cccccc;
+}
+
+body.tema-escuro #sobre {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+body.tema-escuro #sobre p {
+  color: #cccccc;
+}
+
+#alterar-tema {
+  background-color: #222;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+#alterar-tema:hover {
+  background-color: #109e49;
+}
+
+body.tema-escuro #alterar-tema {
+  background-color: #16c65d;
+  color: #111;
+  border-color: #16c65d;
+}
+
+body.tema-escuro #alterar-tema:hover {
+  background-color: #109e49;
+  border-color: #109e49;
+}
+
+body,
+header,
+.produto,
+#sobre,
+#alterar-tema {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+nav a:focus-visible,
+body.tema-escuro nav a:focus-visible {
+  color: #16c65d;
+}
+
+#produtos-api {
+  padding: 60px 27px;
+}
+
+#produtos-api h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#mensagem-api {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 25px 15px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .hero {
+    aspect-ratio: auto;
+    min-height: 350px;
+    padding: 50px 25px;
+
+    background-size: cover;
+    background-position: 65% center;
+  }
+
+  .hero-texto {
+    max-width: 260px;
+  }
+
+  .hero-texto h2 {
+    font-size: 30px;
+  }
+
+  .lista-produtos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 20px 10px;
+    gap: 15px;
+  }
+
+  header h1 {
+    font-size: 26px;
+    white-space: nowrap;
+  }
+
+  nav ul {
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  #alterar-tema {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+}

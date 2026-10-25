@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Lanko Store</title>
+  </head>
+  <body>
+    <header>
+      <h1>LANKO STORE</h1>
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button id="alterar-tema" type="button">🌙 Tema escuro</button>
+    </header>
+    <main>
+      <section id="inicio" class="hero">
+        <div class="hero-texto">
+          <h2>Vista seu estilo</h2>
+          <p>Streetwear para quem busca conforto e personalidade.</p>
+          <a href="#produtos">Ver Produtos</a>
+        </div>
+      </section>
+
+      <section id="produtos">
+        <h2>Nossos Produtos</h2>
+
+        <div class="lista-produtos">
+          <article class="produto">
+            <img
+              src="./images/camiseta.png"
+              alt="Camiseta preta de estilo streetwear"
+            />
+
+            <h3>Camiseta Oversized</h3>
+
+            <p>
+              Camiseta confortável com modelagem ampla, ideal para o dia a dia.
+            </p>
+
+            <span>R$ 89,90</span>
+
+            <button type="button" data-produto="Camiseta Oversized">
+              Adicionar ao carrinho
+            </button>
+          </article>
+
+          <article class="produto">
+            <img
+              src="./images/moletom.png"
+              alt="Moletom preto de estilo streetwear"
+            />
+
+            <h3>Moletom</h3>
+
+            <p>
+              Moletom confortável com capuz, perfeito para dias frios e estilo
+              urbano.
+            </p>
+
+            <span>R$ 169,90</span>
+
+            <button type="button" data-produto="Moletom">
+              Adicionar ao carrinho
+            </button>
+          </article>
+
+          <article class="produto">
+            <img
+              src="./images/calca.png"
+              alt="Calça jeans de estilo streetwear"
+            />
+
+            <h3>Calça Jeans</h3>
+
+            <p>
+              Calça jeans confortável com corte moderno, ideal para o dia a dia.
+            </p>
+
+            <span>R$ 129,90</span>
+
+            <button type="button" data-produto="Calça Jeans">
+              Adicionar ao carrinho
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section id="produtos-api">
+        <h2>Novidades da Loja</h2>
+
+        <p id="mensagem-api" role="status">Carregando produtos...</p>
+
+        <div id="lista-produtos-api" class="lista-produtos"></div>
+      </section>
+
+      <section id="sobre">
+        <h2>Sobre a Lanko Store</h2>
+        <p>
+          A Lanko Store é uma loja fictícia de moda streetwear, criada para quem
+          busca estilo, conforto e personalidade.
+        </p>
+      </section>
+    </main>
+
+    <footer id="contato">
+      <p>Contato: contato@lankostore.com</p>
+      <p id="data-hora"></p>
+      <p>&copy; 2026 Lanko Store. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
